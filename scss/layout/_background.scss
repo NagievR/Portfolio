@@ -1,0 +1,34 @@
+#background, #image, #overlay {
+  position: fixed;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+}
+
+#image {
+  background-image: url("../../imgs/bg.jpg");
+  transform: scale(1.15);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#overlay {
+  background-color: rgba(17, 17, 17, 0.5);
+  animation: fade-out 3s linear;
+}
+
+@keyframes fade-out {
+  0% {
+    background-color: rgb(17, 17, 17);
+  }
+  50% {
+    background-color: rgb(17, 17, 17);
+  }
+  100% {
+    background-color: rgba(17, 17, 17, 0.5);
+  }
+}
+
+
+
