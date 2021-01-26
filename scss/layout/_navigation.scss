@@ -1,6 +1,10 @@
 @import '../abstracts/variables';
 
 .navigation {
+  &::before {
+    @include vertical-line(6.3rem);
+  }
+
   ul {
     margin: 0;
     padding: 0;
@@ -16,8 +20,13 @@
       border-right: $border-white;
       font-size: 0.75rem;
       line-height: 2.8rem;
+      transition: background-color 0.35s;
+      
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.15);   
+      }
 
-      &:last-child {
+      &:nth-child(even) {
         border-right: none;
       }
 

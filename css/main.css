@@ -355,7 +355,7 @@ template {
 .overlay {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-  animation: fade-out 1.2s linear;
+  animation: fade-out 1.1s linear;
 }
 
 @keyframes fade-out {
@@ -410,6 +410,16 @@ template {
   font-size: 2rem;
 }
 
+.content::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 3.5rem;
+  background: #ffffff;
+}
+
 .container {
   border-top: #ffffff 1px solid;
   border-bottom: #ffffff 1px solid;
@@ -418,7 +428,7 @@ template {
   overflow: hidden;
   height: 100%;
   padding: 3.5rem 2rem;
-  animation: open 0.7s ease-out;
+  animation: open 0.6s ease-out;
 }
 
 .container h1 {
@@ -431,20 +441,38 @@ template {
   margin-bottom: 0;
 }
 
+.container div {
+  animation: open-fade-in 0.6s ease-out;
+}
+
 @keyframes open {
   0% {
     height: auto;
     padding: 0;
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
   }
   100% {
     padding: 3.5rem 2rem;
     height: 100%;
+  }
+}
+
+@keyframes open-fade-in {
+  0%, 20% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
+}
+
+.navigation::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 6.3rem;
+  background: #ffffff;
 }
 
 .navigation ul {
@@ -463,9 +491,14 @@ template {
   border-right: #ffffff 1px solid;
   font-size: 0.75rem;
   line-height: 2.8rem;
+  transition: background-color 0.35s;
 }
 
-.navigation ul li:last-child {
+.navigation ul li:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.navigation ul li:nth-child(even) {
   border-right: none;
 }
 
@@ -477,9 +510,11 @@ template {
 }
 
 .footer {
+  text-align: center;
   text-transform: uppercase;
   opacity: 0.8;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   letter-spacing: 0.25rem;
+  margin-top: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

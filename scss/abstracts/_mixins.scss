@@ -9,3 +9,13 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+@mixin vertical-line($height: 3.5rem) {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: $height;
+  background: #ffffff;
+}
