@@ -17,7 +17,7 @@
 .overlay {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-  animation: fade-out 1.2s linear;
+  animation: fade-out 1.1s linear;
 }
 
 @keyframes fade-out {
@@ -31,6 +31,3 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 }
-
-
-
