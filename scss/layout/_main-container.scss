@@ -1,0 +1,24 @@
+@import "../abstracts/mixins.scss";
+
+.main-container {
+  color: #fff; // =======
+  z-index: 3;
+  display: flex; // mixin?
+  flex-direction: column; // ---
+  align-items: center; // ---
+  justify-content: space-between; // mixin?
+  position: relative;
+  box-sizing: border-box;
+  padding: 2rem 3rem;
+  @include max-size;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+}
+
+.main-container > * {
+  transition: opacity 3s ease-in-out;
+  position: relative;
+}
