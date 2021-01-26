@@ -371,17 +371,17 @@ template {
 }
 
 .main-container {
-  color: #fff;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  color: #ffffff;
   position: relative;
   box-sizing: border-box;
   padding: 2rem 3rem;
   min-height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main-container::before {
@@ -389,22 +389,17 @@ template {
   display: block;
 }
 
-.main-container > * {
-  transition: opacity 3s ease-in-out;
-  position: relative;
-}
-
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   text-align: center;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo {
-  border: #fff solid 1px;
+  border: #ffffff 1px solid;
   border-radius: 100%;
   height: 5rem;
   width: 5rem;
@@ -416,14 +411,14 @@ template {
 }
 
 .container {
-  border-top: #fff 1px solid;
-  border-bottom: #fff 1px solid;
-  letter-spacing: 0.15em;
+  border-top: #ffffff 1px solid;
+  border-bottom: #ffffff 1px solid;
+  letter-spacing: 0.15rem;
   margin-top: 3.5rem;
   overflow: hidden;
   height: 100%;
   padding: 3.5rem 2rem;
-  animation: open 0.8s ease-out;
+  animation: open 0.7s ease-out;
 }
 
 .container h1 {
@@ -442,39 +437,32 @@ template {
     padding: 0;
     opacity: 0;
   }
-  10% {
+  20% {
     opacity: 0;
   }
-  80% {
-    padding: 3.5rem 2rem;
-  }
   100% {
+    padding: 3.5rem 2rem;
     height: 100%;
     opacity: 1;
   }
 }
 
 .navigation ul {
-  min-width: 7.5rem;
-  height: 2.75rem;
-  line-height: 2.75rem;
-  padding: 0 1.25rem;
   margin: 0;
   padding: 0;
   margin-top: 3.5rem;
   display: flex;
   list-style: none;
-  border: 1px #fff solid;
+  border: #ffffff 1px solid;
   border-radius: 4px;
   letter-spacing: 0.1rem;
 }
 
 .navigation ul li {
-  min-width: 5rem;
+  min-width: 7rem;
+  border-right: #ffffff 1px solid;
   font-size: 0.75rem;
   line-height: 2.8rem;
-  padding: 0 2rem;
-  border-right: 1px #fff solid;
 }
 
 .navigation ul li:last-child {
@@ -482,8 +470,10 @@ template {
 }
 
 .navigation ul li a {
+  display: block;
+  width: 100%;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer {
