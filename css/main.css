@@ -39,10 +39,6 @@ a:hover {
   text-decoration: underline solid;
 }
 
-.overlay-initial-anim {
-  animation: overlay-init 1.4s linear;
-}
-
 @keyframes overlay-init {
   0%, 50% {
     background-color: black;
@@ -50,10 +46,6 @@ a:hover {
   to {
     background-color: rgba(0, 0, 0, 0.5);
   }
-}
-
-.open-header-anim {
-  animation: open-inner 0.7s ease-in-out;
 }
 
 @keyframes open-inner {
@@ -67,15 +59,11 @@ a:hover {
   }
 }
 
-.content-fade-in {
-  animation: fade-in 0.7s ease-in-out;
-}
-
 @keyframes fade-in {
   0%, 25% {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
@@ -438,6 +426,10 @@ template {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.overlay-initial-anim {
+  animation: overlay-init 1.4s linear;
+}
+
 .main-container {
   z-index: 3;
   color: #ffffff;
@@ -541,6 +533,14 @@ template {
   display: block;
   height: 2.8rem;
   text-decoration: none;
+}
+
+.open-header-anim {
+  animation: open-inner 0.7s ease-in-out;
+}
+
+.content-fade-in {
+  animation: fade-in 0.7s ease-in-out;
 }
 
 .footer {

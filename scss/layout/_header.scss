@@ -73,3 +73,12 @@
     }
   }
 }
+
+// initial animations
+.open-header-anim {
+  @include init-header-anim(open-inner);
+}
+
+.content-fade-in {
+  @include init-header-anim(fade-in);
+}

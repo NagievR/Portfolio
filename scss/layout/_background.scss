@@ -1,4 +1,5 @@
 @import "../abstracts/mixins";
+@import "../abstracts/variables";
 
 .background, .image, .overlay {
   z-index: 1;
@@ -17,4 +18,9 @@
 .overlay {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5); 
+}
+
+// initial animation
+.overlay-initial-anim {
+  animation: overlay-init $anim-duration-bg linear;
 }
