@@ -1,0 +1,50 @@
+@import "./mixins";
+
+// -----------------------------------------------------
+// an initial animation that shows only on page opening.
+// when these animations are over it will be removed 
+// -----------------------------------------------------
+
+// background fade out from black to half opacity
+.overlay-initial-anim {
+  animation: overlay-init $anim-duration-bg linear;
+}
+
+@keyframes overlay-init {
+  0%, 50% {
+    background-color: rgb(0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+// open header (its inner elem) animation
+.open-header-anim {
+  @include init-header-anim(open-inner);
+}
+
+@keyframes open-inner {
+  0% {
+    height: auto;
+    padding: 0;
+  }
+  100% {
+    padding: 3.5rem 2rem;
+    height: 100%;
+  }
+}
+
+// header content fade in animation
+.content-fade-in {
+  @include init-header-anim(fade-in);
+}
+
+@keyframes fade-in {
+  0%, 25% { opacity: 0 }
+  100% { opacity: 1 }
+}
+
+// -----------------------------------------------------
+// other animations
+// -----------------------------------------------------
