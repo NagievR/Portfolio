@@ -424,9 +424,6 @@ template {
 .overlay {
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-}
-
-.overlay-initial-anim {
   animation: overlay-init 1.4s linear;
 }
 

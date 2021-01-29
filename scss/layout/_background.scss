@@ -17,10 +17,6 @@
 
 .overlay {
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5); 
-}
-
-// initial animation
-.overlay-initial-anim {
+  background-color: rgba(0, 0, 0, 0.5);
   animation: overlay-init $anim-duration-bg linear;
 }
