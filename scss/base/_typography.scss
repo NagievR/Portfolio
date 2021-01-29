@@ -1,0 +1,43 @@
+@import "../abstracts/variables";
+
+body {
+  // font-family: 'Manrope', sans-serif;
+  font-family: 'Play', sans-serif;
+  
+  font-size: $default-font-size;
+  letter-spacing: $default-letter-spacing;
+  color: $color-white;
+}
+
+.header, .rights {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header .logo {
+  line-height: 5rem;
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+footer .rights {
+  color: $color-light-gray;
+  opacity: 0.8;
+  font-size: 0.6rem;
+  letter-spacing: 0.23rem;
+}
+
+.rights a {
+  color: $color-light-gray;
+}
+
+a {
+  color: $color-white;
+  text-decoration: underline dotted;
+}
+a:hover {
+  text-decoration: underline solid;
+}
