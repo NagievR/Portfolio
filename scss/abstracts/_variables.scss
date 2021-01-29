@@ -1,2 +1,6 @@
 $color-white: #ffffff;
 $border-white: $color-white 1px solid;
+
+// changing of background animation duration 
+// also changes the duration of other initial animations
+$anim-duration-bg: 1.4s;
