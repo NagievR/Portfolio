@@ -9,10 +9,11 @@
 
 .image {
   background-image: url("https://nagievr.github.io/Portfolio/imgs/bg.jpg"); // ../../imgs/bg.jpg
-  transform: scale(1.15);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  transform: scale(1.11);
+  transition: $transition-switch-page;
 }
 
 .overlay {

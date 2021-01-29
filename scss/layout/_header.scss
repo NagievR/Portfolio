@@ -2,6 +2,7 @@
 @import "../abstracts/mixins";
 
 .header {
+  transition: $transition-switch-page;
   @include column-flex;
 }
 
@@ -72,13 +73,4 @@
       }
     }
   }
-}
-
-// initial animations
-.init-anim-inner {
-  @include init-header-anim(open-inner);
-}
-
-.init-anim-inner-container {
-  @include init-header-anim(fade-in);
 }

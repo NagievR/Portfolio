@@ -6,6 +6,6 @@ $border-white: $color-white 1px solid;
 $default-font-size: 0.8rem;
 $default-letter-spacing: 0.15rem;
 
-// changing of background animation duration 
-// also changes the duration of other initial animations
 $anim-duration-bg: 1.4s;
+$dur: 0.4s;
+$transition-switch-page: transform $dur, filter $dur, opacity $dur ease;

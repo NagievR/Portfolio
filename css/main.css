@@ -68,6 +68,26 @@ a:hover {
   }
 }
 
+.init-anim-inner {
+  animation: open-inner 0.7s ease-in-out;
+}
+
+.init-anim-inner-container {
+  animation: fade-in 0.7s ease-in-out;
+}
+
+.switch-page {
+  filter: blur(0.2rem) !important;
+  transform: scale(0.9) !important;
+  opacity: 0 !important;
+}
+
+.switch-page-bg-image {
+  filter: blur(0.2rem) !important;
+  transform: scale(1.01) !important;
+  opacity: 1 !important;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -415,10 +435,11 @@ template {
 
 .image {
   background-image: url("https://nagievr.github.io/Portfolio/imgs/bg.jpg");
-  transform: scale(1.15);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  transform: scale(1.11);
+  transition: transform 0.4s, filter 0.4s, opacity 0.4s ease;
 }
 
 .overlay {
@@ -447,6 +468,7 @@ template {
 }
 
 .header {
+  transition: transform 0.4s, filter 0.4s, opacity 0.4s ease;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -530,14 +552,6 @@ template {
   display: block;
   height: 2.8rem;
   text-decoration: none;
-}
-
-.init-anim-inner {
-  animation: open-inner 0.7s ease-in-out;
-}
-
-.init-anim-inner-container {
-  animation: fade-in 0.7s ease-in-out;
 }
 
 .footer {
