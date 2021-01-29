@@ -532,7 +532,7 @@ template {
   text-decoration: none;
 }
 
-.open-header-anim {
+.open-header-inner {
   animation: open-inner 0.7s ease-in-out;
 }
 

@@ -1,28 +1,10 @@
-import { removeInitialAnim } from "./modules/remove-initial-anim.js"; 
-
-const overlay = document.querySelector('.background > .overlay');
-const bgImage = document.querySelector('.background > .image');
+import { removeAnimationClass } from "./modules/remove-animation-class.js"; 
 
 const header = document.querySelector('.header');
-const headerContainer = document.querySelector('.header > .container');
-const nav = document.querySelector('.navigation > ul');
+const headerInner = header.querySelector('.inner');
+const innerContainer = header.querySelector('.inner-container');
 
-const footer = document.querySelector('.footer');
-
-
-removeInitialAnim(overlay, 'overlay-initial-anim');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+removeAnimationClass({
+  'content-fade-in': innerContainer,
+  'open-header-inner': headerInner,
+});

@@ -75,7 +75,7 @@
 }
 
 // initial animations
-.open-header-anim {
+.open-header-inner {
   @include init-header-anim(open-inner);
 }
 
