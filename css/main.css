@@ -532,11 +532,11 @@ template {
   text-decoration: none;
 }
 
-.open-header-inner {
+.init-anim-inner {
   animation: open-inner 0.7s ease-in-out;
 }
 
-.content-fade-in {
+.init-anim-inner-container {
   animation: fade-in 0.7s ease-in-out;
 }
 

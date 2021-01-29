@@ -75,10 +75,10 @@
 }
 
 // initial animations
-.open-header-inner {
+.init-anim-inner {
   @include init-header-anim(open-inner);
 }
 
-.content-fade-in {
+.init-anim-inner-container {
   @include init-header-anim(fade-in);
 }

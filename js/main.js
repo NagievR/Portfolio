@@ -5,6 +5,6 @@ const headerInner = header.querySelector('.inner');
 const innerContainer = header.querySelector('.inner-container');
 
 removeAnimationClass({
-  'content-fade-in': innerContainer,
-  'open-header-inner': headerInner,
+  'init-anim-inner-container': innerContainer,
+  'init-anim-inner': headerInner,
 });
