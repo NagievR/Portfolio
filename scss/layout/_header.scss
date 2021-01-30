@@ -2,7 +2,7 @@
 @import "../abstracts/mixins";
 
 .header {
-  transition: $transition-switch-page;
+  transition: $transition-switch-section;
   @include column-flex;
 }
 

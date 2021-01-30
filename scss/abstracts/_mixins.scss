@@ -37,8 +37,8 @@
   }
 }
 
-@mixin switch-page-animation($blur: 0, $scale: 1, $opacity: 1) {
-  filter: blur($blur) !important;
+@mixin switch-section-anim($blur: 0, $scale: 1, $opacity: 1) {
+  filter: blur(0) !important;
   transform: scale($scale) !important;
   opacity: $opacity !important;
 }

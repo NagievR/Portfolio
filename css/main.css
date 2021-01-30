@@ -76,14 +76,14 @@ a:hover {
   animation: fade-in 0.7s ease-in-out;
 }
 
-.switch-page {
-  filter: blur(0.2rem) !important;
+.switch-section {
+  filter: blur(0) !important;
   transform: scale(0.9) !important;
   opacity: 0 !important;
 }
 
-.switch-page-bg-image {
-  filter: blur(0.2rem) !important;
+.switch-section-bg-image {
+  filter: blur(0) !important;
   transform: scale(1.01) !important;
   opacity: 1 !important;
 }
@@ -556,5 +556,6 @@ template {
 
 .footer {
   margin-top: 1rem;
+  transition: transform 0.4s, filter 0.4s, opacity 0.4s ease;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,3 +1,6 @@
+@import "../abstracts/variables";
+
 .footer {
   margin-top: 1rem;
+  transition: $transition-switch-section;
 }

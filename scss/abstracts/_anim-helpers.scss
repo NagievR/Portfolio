@@ -8,11 +8,11 @@
   @include init-header-anim(fade-in);
 }
 
-// switch page animations
-.switch-page {
-  @include switch-page-animation(0.2rem, 0.9, 0);
+// switch section animations
+.switch-section {
+  @include switch-section-anim(0.2rem, 0.9, 0);
 }
 
-.switch-page-bg-image {
-  @include switch-page-animation(0.2rem, 1.01);
+.switch-section-bg-image {
+  @include switch-section-anim(0.2rem, 1.01);
 }

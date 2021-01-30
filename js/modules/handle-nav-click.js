@@ -3,27 +3,25 @@ const header = document.querySelector('.header');
 const nav = header.querySelector('.navigation');
 const footer = document.querySelector('.footer');
 
+export let didAnimationEnd = true;
+
 export const handleNavClick = () => {
 
   const trEndHandler = () => {
-    header.style.visibility = 'none';
+    header.style.display = 'none';
     didAnimationEnd = true;
     bgImage.removeEventListener('transitionend', trEndHandler);
   }
 
-  let didAnimationEnd = true;
-
   const handleClick = event => {
     if (event.target.tagName !== 'A' || !didAnimationEnd) {
-      console.log('nope');
       return;
     }
     didAnimationEnd = false;
 
-    console.log('ok');
-    bgImage.classList.toggle('switch-page-bg-image'); 
-    header.classList.toggle('switch-page');
-    footer.classList.toggle('switch-page');
+    bgImage.classList.add('switch-section-bg-image'); 
+    header.classList.add('switch-section');
+    footer.classList.add('switch-section');
   
     bgImage.addEventListener('transitionend', trEndHandler);
   }
