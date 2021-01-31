@@ -9,29 +9,16 @@ body {
   color: $color-white;
 }
 
-.header, .rights {
+h2,
+.header, 
+.rights {
   text-align: center;
   text-transform: uppercase;
-}
-
-.header .logo {
-  line-height: 5rem;
-  font-size: 1.5rem;
+  word-spacing: 0.25rem;
 }
 
 h1 {
   font-size: 2.5rem;
-}
-
-footer .rights {
-  color: $color-light-gray;
-  opacity: 0.8;
-  font-size: 0.6rem;
-  letter-spacing: 0.23rem;
-}
-
-.rights a {
-  color: $color-light-gray;
 }
 
 a {
