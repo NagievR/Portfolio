@@ -55,23 +55,20 @@
     border-radius: $border-radius;
 
     li {
+      cursor: pointer;
       min-width: 7rem;
       border-right: $border-white;
       transition: background-color 0.35s;
-      
-      &:hover {
+      line-height: 2.8rem;
+      display: block;
+
+      &:focus, &:hover {
+        outline: none;
         background-color: rgba(255, 255, 255, 0.15);   
       }
 
       &:nth-child(even) {
         border-right: none;
-      }
-
-      a {
-        line-height: 2.8rem;
-        display: block;
-        height: 2.8rem;
-        text-decoration: none;
       }
     }
   }
