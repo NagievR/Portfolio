@@ -1,11 +1,14 @@
 $color-white: #ffffff;
 $color-light-gray: #cccccc;
+$color-dark: #2c2c2c;
 
-$border-white: $color-white 1px solid;
+$border-white: ($color-white 1px solid);
+$border-radius: 4px;
 
 $default-font-size: 0.8rem;
 $default-letter-spacing: 0.15rem;
 
-$anim-duration-bg: 1.4s;
 $dur: 0.4s;
-$transition-switch-section: transform $dur, filter $dur, opacity $dur ease;
+$transition-switch-section: (transform $dur ease, filter $dur ease, opacity $dur ease);
+$anim-duration-bg: 1.2s;
+$default-transition-duration: 0.3s;

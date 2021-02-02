@@ -19,7 +19,7 @@
   left: 50%;
   width: 1px;
   height: $height;
-  background: #ffffff;
+  background: $color-white;
 }
 
 @mixin init-header-anim($name) {
@@ -38,7 +38,7 @@
 }
 
 @mixin switch-section-anim($blur: 0, $scale: 1, $opacity: 1) {
-  filter: blur(0) !important;
+  filter: blur($blur) !important;
   transform: scale($scale) !important;
   opacity: $opacity !important;
 }
