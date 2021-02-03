@@ -1,41 +1,39 @@
 const bgImage = document.querySelector('.background > .image');
 const header = document.querySelector('.header');
 const nav = header.querySelector('.navigation');
-const footer = document.querySelector('.footer');
 
 const about = document.getElementById('about');
-const skills = document.getElementById('skills');
-const sections = document.querySelector('.sections-container');
 
 export const handleNavClick = () => {
 
-  const trEndHandler = () => {
+  const switchToSection = () => {
     header.style.display = 'none';
     about.style.display = 'block';
     
     setTimeout(() => {
       about.style.opacity = '1';
-    });
-
-    bgImage.removeEventListener('transitionend', trEndHandler);
-  }
-
-  const handleClick = e => {
+    }, 20);
+    
+    bgImage.removeEventListener('transitionend', switchToSection);
+  };
+    
+  const moveAllToBack = e => {
     if (e.target.tagName !== 'LI') {
       return;
     }
-    bgImage.classList.add('switch-section-bg-image'); 
-    header.classList.add('switch-section');
-
-    bgImage.addEventListener('transitionend', trEndHandler);
-  }
-
+    header.classList.add('move-header-to-back');
+    bgImage.classList.add('move-bg-image-to-back'); 
+    bgImage.addEventListener('transitionend', switchToSection);
+  };
+  
   const handleKeydown = e => { 
     if (e.key === 'Enter') {
-      handleClick(e);
+      console.dir(e.target)
+      moveAllToBack(e);
     }
-  }
+  };
 
-  nav.addEventListener('click', handleClick);
+  nav.addEventListener('click', moveAllToBack);
   nav.addEventListener('keydown', handleKeydown);
-}
+
+};

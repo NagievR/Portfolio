@@ -8,11 +8,13 @@
   @include init-header-anim(fade-in);
 }
 
+
 // switch section animations
-.switch-section {
+
+.move-header-to-back {
   @include switch-section-anim(0.2rem, 0.9, 0);
 }
 
-.switch-section-bg-image {
+.move-bg-image-to-back {
   @include switch-section-anim(0.2rem, 1.01);
 }
