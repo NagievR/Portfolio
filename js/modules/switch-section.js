@@ -1,10 +1,11 @@
 const header = document.querySelector('.header');
 const bgImage = document.querySelector('.background > .image');
 const closeSection = document.querySelector('.close-section');
+const mainContainer = document.querySelector('.main-container');
 
-export const switchSection = () => { let s = null;
+export const switchSection = () => {
 
-  const trEndHandler = () => { 
+  const transitionEndHandler = () => { 
     section.style.display = '';
     header.style.display = '';
   
@@ -12,25 +13,38 @@ export const switchSection = () => { let s = null;
       header.classList.remove('switch-section');
       bgImage.classList.remove('switch-section-bg-image'); 
     }, 20);
-    
-    console.log(new Date() - s);
+
+    mainContainer.removeEventListener('click', handleClick);
+    section.removeEventListener('keydown', handleKeydown);
   };
-  
-  const handleClick = () => {
-    s = new Date();
+
+  const handleCloseEvent = () => {
     section.style.opacity = '0';
-    setTimeout(trEndHandler, trDuration);
+    const duration = parseFloat(getComputedStyle(section)['transitionDuration']) * 1000;
+    setTimeout(transitionEndHandler, duration);
+  }
+  
+  const handleClick = e => {
+    const targ = e.target;
+    const isBackground = targ.classList.contains('main-container');
+    const isCloseBtn = targ.classList.contains('close-section');
+    if (isBackground || isCloseBtn) {
+      handleCloseEvent();
+    }
   }
 
   const handleKeydown = e => {
     if (e.key === 'Enter') {
-      handleClick(e);
+      handleCloseEvent();
     }
   }
   
-  const section = closeSection.closest('.section');
-  const trDuration = parseFloat(getComputedStyle(section)['transitionDuration']) * 1000;
+  const blockOnOpen = () => {
+    mainContainer.addEventListener('click', handleClick);
+    section.addEventListener('keydown', handleKeydown);
+  }
 
-  closeSection.addEventListener('click', handleClick);
-  section.addEventListener('keydown', handleKeydown);
+  const section = closeSection.closest('.section');
+
+  section.addEventListener('transitionend', blockOnOpen);
 }
