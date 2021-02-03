@@ -9,15 +9,7 @@ const closeSection = document.querySelector('.close-section');
 
 export const switchSection = () => { let s = null;
 
-  const trEndHandler = e => { 
-    
-    // debugger
-    // const section = e.target.closest('.section');
-    // section.removeEventListener('transitionend', trEndHandler);
-    console.log('vse');
-
-    // return;
-// debugger
+  const trEndHandler = () => { 
     section.style.display = '';
     header.style.display = '';
   
@@ -25,32 +17,23 @@ export const switchSection = () => { let s = null;
       header.classList.remove('switch-section');
       bgImage.classList.remove('switch-section-bg-image'); 
     }, 20);
-    // console.log(new Date - s);
     
-    console.log(new Date() - s)
+    console.log(new Date() - s);
 
     section.addEventListener('transitionend', onOpenHandler);
-    // sectionsContainer.removeEventListener('transitionend', trEndHandler);
   };
   
-  const handleClick = e => {
-    console.dir(e.target);
+  const handleClick = () => {
     s = new Date();
-    // debugger
-
     section.style.opacity = '0';
     
     const duration = parseFloat(getComputedStyle(section)['transitionDuration']) * 1000;
     setTimeout(trEndHandler, duration);
-    
-    
+       
     closeSection.removeEventListener('click', handleClick);
-    // sectionsContainer.addEventListener('transitionend', trEndHandler);
   }
-  
+
   const onOpenHandler = () => {
-    // debugger
-    console.log('trenderd');
     closeSection.addEventListener('click', handleClick);
     section.removeEventListener('transitionend', onOpenHandler);
   }
