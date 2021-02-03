@@ -1,10 +1,5 @@
-const bgImage = document.querySelector('.background > .image');
 const header = document.querySelector('.header');
-const footer = document.querySelector('.footer');
-
-const about = document.getElementById('about');
-
-const sectionsContainer = document.querySelector('.sections-container');
+const bgImage = document.querySelector('.background > .image');
 const closeSection = document.querySelector('.close-section');
 
 export const switchSection = () => { let s = null;
@@ -24,17 +19,18 @@ export const switchSection = () => { let s = null;
   const handleClick = () => {
     s = new Date();
     section.style.opacity = '0';
-    const duration = parseFloat(getComputedStyle(section)['transitionDuration']) * 1000;
-    setTimeout(trEndHandler, duration);
+    setTimeout(trEndHandler, trDuration);
   }
 
-  const handleKeydown = e => { 
+  const handleKeydown = e => {
     if (e.key === 'Enter') {
       handleClick(e);
     }
   }
   
   const section = closeSection.closest('.section');
-  section.addEventListener('keydown', handleKeydown);
+  const trDuration = parseFloat(getComputedStyle(section)['transitionDuration']) * 1000;
+
   closeSection.addEventListener('click', handleClick);
+  section.addEventListener('keydown', handleKeydown);
 }
