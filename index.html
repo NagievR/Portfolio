@@ -29,10 +29,10 @@
       </div> 
       <nav class="navigation">
         <ul>
-          <li tabindex="1">about</li>
-          <li tabindex="2">skills</li>
-          <li tabindex="3">projects</li>
-          <li tabindex="4">contact</li>
+          <li data-section-name="about" tabindex="1">about</li>
+          <li data-section-name="skills" tabindex="2">skills</li>
+          <li data-section-name="projects" tabindex="3">projects</li>
+          <li data-section-name="contacts" tabindex="4">contacts</li>
         </ul>
       </nav>
     </header>
@@ -40,7 +40,9 @@
     <main class="sections-container">
       <article id="about" class="section">
         <h2>about</h2>
-        <span class="close-section"></span>
+        <span tabindex='0' class="close-section">
+          <!-- <img src="./imgs/close.png" alt="close"> -->
+        </span>
         <img src="./imgs/pic01_1.jpg" alt="me">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis vitae nam possimus. Laboriosam, et cumque ducimus quod ea corrupti blanditiis veritatis quaerat voluptatum quae natus consequatur debitis nesciunt quos!
@@ -56,21 +58,42 @@
 
       <article id="skills" class="section" >
         <h2>skills</h2>
+        <span tabindex='0' class="close-section">
+          <!-- <img src="./imgs/close.png" alt="close"> -->
+        </span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis vitae nam possimus. Laboriosam, et cumque ducimus quod ea corrupti blanditiis veritatis quaerat voluptatum quae natus consequatur debitis nesciunt quos!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </p>
       </article>
 
       <article id="projects" class="section" >
         <h2>projects</h2>
+        <span tabindex='0' class="close-section">
+          <!-- <img src="./imgs/close.png" alt="close"> -->
+        </span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis vitae nam possimus. Laboriosam, et cumque ducimus quod ea corrupti blanditiis veritatis quaerat voluptatum quae natus consequatur debitis nesciunt quos!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </p>
       </article>
 
       <article id="contacts" class="section" >
         <h2>contacts</h2>
+        <span tabindex='0' class="close-section">
+          <!-- <img src="./imgs/close.png" alt="close"> -->
+        </span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum veritatis vitae nam possimus. Laboriosam, et cumque ducimus quod ea corrupti blanditiis veritatis quaerat voluptatum quae natus consequatur debitis nesciunt quos!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </p>
       </article>
     </main> <!-- /sections -->
 
     <footer class="footer">
       <span class="rights">
         &#169;undefined. images: 
-        <a href="https://unsplash.com/" target="_blank">unsplash</a>
+        <a tabindex="-1" href="https://unsplash.com/" target="_blank">unsplash</a>
       </span>
     </footer>
 
