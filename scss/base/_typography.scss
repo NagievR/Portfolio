@@ -3,22 +3,16 @@
 body {
   // font-family: 'Manrope', sans-serif;
   font-family: 'Play', sans-serif;
-  
   font-size: $default-font-size;
-  letter-spacing: $default-letter-spacing;
   color: $color-white;
-}
-
-h2,
-.header, 
-.rights {
-  text-align: center;
-  text-transform: uppercase;
-  word-spacing: 0.25rem;
 }
 
 h1 {
   font-size: 2.5rem;
+}
+
+p {
+  line-height: 1.6rem;
 }
 
 a {
@@ -27,4 +21,13 @@ a {
 }
 a:hover {
   text-decoration: underline solid;
+}
+
+h2,
+.header, 
+.rights {
+  letter-spacing: $default-letter-spacing;
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 0.25rem;
 }
