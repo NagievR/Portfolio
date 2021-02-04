@@ -1,4 +1,4 @@
-import { removeAnimationClass } from "./modules/remove-animation-class.js";
+import { removeInitialAnimations } from "./modules/remove-initial-animations.js";
 import { sectionOnOpen } from "./modules/section-on-open.js";
 import { sectionOnClose } from "./modules/section-on-close.js";
 
@@ -17,7 +17,7 @@ const sections = {
   'contacts': document.getElementById('contacts'),
 };
 
-removeAnimationClass({
+removeInitialAnimations({
   'init-anim-inner-container': innerContainer,
   'init-anim-inner': headerInner,
 });

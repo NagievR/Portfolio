@@ -1,4 +1,4 @@
-export const removeAnimationClass = obj => {
+export const removeInitialAnimations = obj => {
 
   const elements = Object.values(obj);
   const classNames = Object.keys(obj);
