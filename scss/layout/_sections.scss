@@ -1,5 +1,5 @@
 .section {
-  transition: opacity $default-transition-duration;
+  transition: opacity 0.3s ease-in;
   position: relative;
   display: none;
   opacity: 0;
@@ -42,12 +42,12 @@
   right: 0.3rem;
   top: 0.3rem;
   border-radius: 100%;
-  transition: background-color $default-transition-duration;
+  transition: background-color 0.35s;
   
   &:focus,
   &:hover {
     outline: none;
-    background-color: rgba(255, 255, 255, 0.07);
+    background-color: rgba(255, 255, 255, 0.04);
   }
 
   &::before {
