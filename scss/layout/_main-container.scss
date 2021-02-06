@@ -1,5 +1,6 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
+@import "../abstracts/breakpoints";
 
 .main-container {
   z-index: 3;
@@ -9,6 +10,10 @@
   padding: 2rem 3rem;
   @include max-size;
   @include column-flex;
+
+  @include media('<=phone') {
+    padding: 2% 3%;
+  }
 
   &::before {
     content: '';
