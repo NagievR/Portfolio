@@ -16,7 +16,7 @@
   @include switch-section-anim(0.2rem, 0.9, 0);
 
   // remove blur on mobile devices to prevent lags
-  @include media('<=phone') {
+  @include media('<tablet') {
     @include switch-section-anim(0, 0.9, 0);
   };
 }
@@ -25,7 +25,7 @@
   @include switch-section-anim(0.2rem, 1.01);
 
   // remove blur on mobile devices to prevent lags
-  @include media('<=phone') {
+  @include media('<tablet') {
     @include switch-section-anim(0, 1.01);
   };
 }
