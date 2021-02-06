@@ -8,6 +8,12 @@ $border-radius: 4px;
 $default-font-size: 0.8rem;
 $default-letter-spacing: 0.15rem;
 
+$inner-padding-vertical: 5vh;
+$inner-padding-horizontal: 1rem;
+
 $dur: 0.4s;
 $transition-switch-section: (transform $dur ease, filter $dur ease, opacity $dur ease);
-$anim-duration-bg: 1.2s;
+
+// changing of background animation duration 
+// also changes the duration of other initial animations
+$anim-duration-bg: 1.6s;
