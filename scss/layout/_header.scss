@@ -2,13 +2,13 @@
 @import "../abstracts/mixins";
 @import "../abstracts/breakpoints";
 
-$vl-height: 3.5rem;
-$li-height: 2.8rem;
-
 .header {
   transition: $transition-switch-section;
   max-height: 30rem;
-  @include column-flex;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo {
@@ -18,15 +18,23 @@ $li-height: 2.8rem;
   width: 5rem;
   line-height: 5rem;
   font-size: 1.5rem;
+  @include media('<=phone') {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+  }
 }
 
 .inner {
   border-top: $border-white;
   border-bottom: $border-white;
-  margin-top: $vl-height;
+  padding: $inner-padding-vertical $inner-padding-horizontal;
+  margin-top: $vert-line-height;
   overflow: hidden;  
   max-height: 100%;
-  padding: $inner-padding-vertical $inner-padding-horizontal;
+  @include media('<=phone') {
+    margin-top: $vert-line-height-mobile;
+  }
 
   h1 {
     margin-top: 0;
@@ -42,27 +50,34 @@ $li-height: 2.8rem;
 
 .content {
   &::before {
-    @include vertical-line($vl-height);
+    @include vertical-line($vert-line-height);
+    @include media('<=phone') {
+      @include vertical-line($vert-line-height-mobile);
+    }
   }
 }
 
 .navigation {
   &::before {
-    @include vertical-line($vl-height + $li-height);
-
-    // @include media('<=phone') {
-    //   @include vertical-line($vl-height - 1rem);
-    // };
+    @include vertical-line($vert-line-height + $li-height);
+    @include media('<=phone') {
+      @include vertical-line($vert-line-height-mobile);
+    }
   }
 
   ul {
     margin: 0;
     padding: 0;
-    margin-top: $vl-height;
+    margin-top: $vert-line-height;
     display: flex;
     list-style: none;
     border: $border-white;
     border-radius: $border-radius;
+    @include media('<=phone') {
+      flex-direction: column;
+      margin-top: $vert-line-height-mobile;
+      min-width: 50vw;
+    }
 
     li {
       cursor: pointer;
@@ -71,6 +86,11 @@ $li-height: 2.8rem;
       transition: background-color 0.35s;
       line-height: $li-height;
       display: block;
+      @include media('<=phone') {
+        border-right: none;
+        line-height: $li-height-mobile;
+        border-bottom: $border-white;
+      }
 
       &:focus,
       &:hover {
@@ -81,53 +101,12 @@ $li-height: 2.8rem;
       &:nth-child(even) {
         border-right: none;
       }
-    }
-  }
-}
 
-$vl-height-less: 5vh;
-$li-height-less: 6vh;
-
-@include media('<=phone') {
-
-  .logo {
-    height: 4rem;
-    width: 4rem;
-    line-height: 4rem;
-  
-  }
-
-
-  .inner {
-    margin-top: $vl-height-less;
-    // padding: 3vh 4%;
-  }
-
-  .content {
-    &::before {
-      @include vertical-line($vl-height-less);
-    }
-  }
-
-  .navigation {
-    &::before {
-      @include vertical-line($vl-height-less);
-    }
-
-    ul {
-      flex-direction: column;
-      margin-top: $vl-height-less;
-      min-width: 50vw;
-
-      li {
-        border-right: none;
-        line-height: $li-height-less;
-        border-bottom: $border-white;
-
+      @include media('<=phone') {
         &:last-child {
           border-bottom: none;
         }
       }
     }
   }
-};
+}
