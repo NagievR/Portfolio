@@ -1,10 +1,10 @@
-@import "../abstracts/mixins";
 @import "../abstracts/variables";
 
 .background, .image, .overlay {
   z-index: 1;
   position: fixed;
-  @include max-size;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .image {
