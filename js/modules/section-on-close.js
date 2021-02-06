@@ -40,7 +40,6 @@ export const sectionOnClose = ({
     chosenSection = sections[targ.id];
 
     document.body.addEventListener('click', handleClick);
-
     chosenSection.addEventListener('keydown', event => {
       if (event.key === 'Enter') {
         closeEventHandler();
