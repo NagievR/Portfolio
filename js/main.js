@@ -3,15 +3,24 @@ import { sectionOnOpen } from "./modules/section-on-open.js";
 import { sectionOnClose } from "./modules/section-on-close.js";
 import { getAllSections } from "./modules/get-all-sections.js";
 
-const sections = {};
-getAllSections(sections, '.section');
+const classNames = {
+  initAnimInner: 'init-anim-inner',
+  sectionWrap: 'section-wrap',
+  mainContainer: 'main-container',
+  closeSection: 'close-section',
+  moveBgImageToBack: 'move-bg-image-to-back',
+  moveHeaderToBack: 'move-header-to-back',
+};
 
-const bgImage = document.querySelector('.background > .image');
-const header = document.querySelector('.header');
-const headerInner = header.querySelector('.inner');
-const nav = header.querySelector('.navigation');
-const sectionsContainer = document.querySelector('.sections-container');
+const elems = {
+  sections: getAllSections('.' + classNames.sectionWrap),
+  bgImage: document.querySelector('.background > .image'),
+  header: document.querySelector('.header'),
+  headerInner: document.querySelector('.inner'),
+  nav: document.querySelector('.navigation'),
+  sectionsContainer: document.querySelector('.sections-container'),
+};
 
-removeInitialAnimations({ 'init-anim-inner': headerInner });
-sectionOnOpen({ sections, header, bgImage, headerInner, nav });
-sectionOnClose({ sections, header, bgImage, sectionsContainer });
+removeInitialAnimations({ [classNames.initAnimInner]: elems.headerInner });
+sectionOnOpen({ classNames, elems });
+sectionOnClose({ classNames, elems });

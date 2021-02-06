@@ -1,10 +1,10 @@
 const getTransitionDurationMs = elem => {
+  // I decided to use timeout instead of 'transitionend'. 
+  // I found it more accurate
   return parseFloat(getComputedStyle(elem)['transitionDuration']) * 1000;
 }
 
-export const sectionOnClose = ({
-    sections, header, bgImage, sectionsContainer 
-  }) => {
+export const sectionOnClose = ({ classNames, elems }) => {
 
   const closeEventHandler = () => {
     chosenSection.style.opacity = '0';
@@ -14,18 +14,18 @@ export const sectionOnClose = ({
 
   const transitionEndHandler = () => { 
     chosenSection.style.display = '';
-    header.style.display = '';
+    elems.header.style.display = '';
   
     setTimeout(() => {
-      header.classList.remove('move-header-to-back');
-      bgImage.classList.remove('move-bg-image-to-back'); 
+      elems.header.classList.remove(classNames.moveHeaderToBack);
+      elems.bgImage.classList.remove(classNames.moveBgImageToBack); 
     }, 20);
   };
 
   const handleClick = event => {
     const targ = event.target;
-    const isBackground = targ.classList.contains('main-container');
-    const isCloseBtn = targ.classList.contains('close-section');
+    const isBackground = targ.classList.contains(classNames.mainContainer);
+    const isCloseBtn = targ.classList.contains(classNames.closeSection);
     
     if (isBackground || isCloseBtn) {
       closeEventHandler();
@@ -34,10 +34,10 @@ export const sectionOnClose = ({
 
   const waitUntilSectionOpens = event => {
     const targ = event.target;
-    if (!targ.classList.contains('section')) {
+    if (!targ.classList.contains(classNames.sectionWrap)) {
       return;
     }
-    chosenSection = sections[targ.id];
+    chosenSection = elems.sections[targ.id];
 
     document.body.addEventListener('click', handleClick);
     chosenSection.addEventListener('keydown', event => {
@@ -49,6 +49,7 @@ export const sectionOnClose = ({
 
   let chosenSection = null;
 
-  sectionsContainer.addEventListener('transitionend', waitUntilSectionOpens);
-
+  elems.sectionsContainer.addEventListener(
+    'transitionend', waitUntilSectionOpens
+  );
 };

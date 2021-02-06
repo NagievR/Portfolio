@@ -1,5 +1,10 @@
-export const getAllSections = (obj, selector) => {
+export const getAllSections = selector => {
+
+  const sections = {};
+
   document.querySelectorAll(selector).forEach(section => {
-    obj[section.id] = section;
+    sections[section.id] = section;
   });
+  
+  return sections;
 };
