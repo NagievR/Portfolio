@@ -1,4 +1,6 @@
-export const sectionOnOpen = ({ sections, header, nav, bgImage }) => {
+export const sectionOnOpen = ({ 
+    sections, header, nav, bgImage, headerInner 
+  }) => {
 
   const switchToSection = () => {
     header.style.display = 'none';
@@ -10,7 +12,7 @@ export const sectionOnOpen = ({ sections, header, nav, bgImage }) => {
     
     bgImage.removeEventListener('transitionend', switchToSection);
   };
-    
+
   const moveAllToBack = event => {
     if (event.target.tagName !== 'LI') {
       return;
@@ -19,22 +21,24 @@ export const sectionOnOpen = ({ sections, header, nav, bgImage }) => {
     bgImage.classList.add('move-bg-image-to-back'); 
     bgImage.addEventListener('transitionend', switchToSection);
   };
-  
-  const handleKeydown = event => { 
-    if (event.key === 'Enter') {
+
+  const handleNavigationEvent = event => {
+    if (!headerInner.classList.contains('init-anim-inner')) {
       chosenSection = sections[event.target.dataset.sectionName];
       moveAllToBack(event);
     }
   };
 
-  const handleClick = event => {
-    chosenSection = sections[event.target.dataset.sectionName];
-    moveAllToBack(event);
-  }
-
   let chosenSection = null;
   
-  nav.addEventListener('click', handleClick);
-  nav.addEventListener('keydown', handleKeydown);
+  nav.addEventListener('click', event => {
+    handleNavigationEvent(event);
+  });
+
+  nav.addEventListener('keydown', event => {
+    if (event.key === 'Enter') {
+      handleNavigationEvent(event);
+    }
+  });
 
 };
