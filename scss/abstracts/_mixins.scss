@@ -23,8 +23,6 @@
 }
 
 @mixin init-header-anim($name) {
-  // changing of background animation duration 
-  // also changes the duration of other initial animations
   $name-set: true;
 
   @if $name == '' {
@@ -33,7 +31,7 @@
   }
 
   @if $name-set {
-    animation: $name ($anim-duration-bg / 2) ease-in-out;
+    animation: $name ($anim-duration-bg / 2) ease;
   }
 }
 
