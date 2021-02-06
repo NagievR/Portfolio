@@ -1,8 +1,8 @@
 @import "../abstracts/mixins";
 
-// -----------------------------------------------------
-// an initial animation that shows only on page opening.
-// -----------------------------------------------------
+// ---------------------------------------------------------
+// the initial animations that show only on page opening
+// ---------------------------------------------------------
 
 // background fade out from black to half opacity
 @keyframes overlay-init {
@@ -10,20 +10,14 @@
   to { background-color: rgba(0, 0, 0, 0.5) }
 }
 
-// open header (its inner elem) animation
+// open header animation
 @keyframes open-inner {
-  0% {
-    height: auto;
-    padding: 0 2rem;
+  0%, 25% {
+    max-height: 0;
+    padding: 0 $inner-padding-horizontal;
   }
-  100% {
-    padding: 3.5rem 2rem;
-    height: 100%;
+  to {
+    max-height: 30rem;
+    padding: $inner-padding-vertical $inner-padding-horizontal;
   }
-}
-
-// header content fade in animation
-@keyframes fade-in {
-  0%, 25% { opacity: 0 }
-  to { opacity: 1 }
 }

@@ -1,20 +1,31 @@
+@import "./breakpoints";
+
+// ------------------------------------
 // initial animations
+// ------------------------------------
 
 .init-anim-inner {
   @include init-header-anim(open-inner);
 }
 
-.init-anim-inner-container {
-  @include init-header-anim(fade-in);
-}
-
-
+// ------------------------------------
 // switch section animations
+// ------------------------------------
 
 .move-header-to-back {
   @include switch-section-anim(0.2rem, 0.9, 0);
+
+  // remove blur on mobile devices to prevent lags
+  @include media('<=phone') {
+    @include switch-section-anim(0, 0.9, 0);
+  };
 }
 
 .move-bg-image-to-back {
   @include switch-section-anim(0.2rem, 1.01);
+
+  // remove blur on mobile devices to prevent lags
+  @include media('<=phone') {
+    @include switch-section-anim(0, 1.01);
+  };
 }
