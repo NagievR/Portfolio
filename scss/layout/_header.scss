@@ -1,8 +1,13 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
+@import "../abstracts/breakpoints";
+
+$vl-height: 3.5rem;
+$li-height: 2.8rem;
 
 .header {
   transition: $transition-switch-section;
+  max-height: 30rem;
   @include column-flex;
 }
 
@@ -18,37 +23,42 @@
 .inner {
   border-top: $border-white;
   border-bottom: $border-white;
-  margin-top: 3.5rem;
+  margin-top: $vl-height;
   overflow: hidden;  
-  height: 100%;
-  padding: 3.5rem 2rem;
+  max-height: 100%;
+  padding: $inner-padding-vertical $inner-padding-horizontal;
 
   h1 {
     margin-top: 0;
+    @include media('<=phone') {
+      margin-bottom: 0.8rem;
+    }
   }
 
   p {
-    margin-bottom: 0;
+    margin: 0;
   }
 }
 
 .content {
-  min-width: 100%;
-
   &::before {
-    @include vertical-line;
+    @include vertical-line($vl-height);
   }
 }
 
 .navigation {
   &::before {
-    @include vertical-line(6.3rem);
+    @include vertical-line($vl-height + $li-height);
+
+    // @include media('<=phone') {
+    //   @include vertical-line($vl-height - 1rem);
+    // };
   }
 
   ul {
     margin: 0;
     padding: 0;
-    margin-top: 3.5rem;
+    margin-top: $vl-height;
     display: flex;
     list-style: none;
     border: $border-white;
@@ -59,7 +69,7 @@
       min-width: 7rem;
       border-right: $border-white;
       transition: background-color 0.35s;
-      line-height: 2.8rem;
+      line-height: $li-height;
       display: block;
 
       &:focus,
@@ -74,3 +84,50 @@
     }
   }
 }
+
+$vl-height-less: 5vh;
+$li-height-less: 6vh;
+
+@include media('<=phone') {
+
+  .logo {
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+  
+  }
+
+
+  .inner {
+    margin-top: $vl-height-less;
+    // padding: 3vh 4%;
+  }
+
+  .content {
+    &::before {
+      @include vertical-line($vl-height-less);
+    }
+  }
+
+  .navigation {
+    &::before {
+      @include vertical-line($vl-height-less);
+    }
+
+    ul {
+      flex-direction: column;
+      margin-top: $vl-height-less;
+      min-width: 50vw;
+
+      li {
+        border-right: none;
+        line-height: $li-height-less;
+        border-bottom: $border-white;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+};
