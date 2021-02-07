@@ -5,7 +5,7 @@ import { getAllSections } from "./modules/get-all-sections.js";
 
 const classNames = {
   initAnimInner: 'init-anim-inner',
-  sectionWrap: 'section-wrap',
+  sectionWrap: 'sections-wrap',
   mainContainer: 'main-container',
   closeSection: 'close-section',
   moveBgImageToBack: 'move-bg-image-to-back',
