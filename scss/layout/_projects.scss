@@ -1,0 +1,55 @@
+@import "../abstracts/variables";
+@import "../vendors/breakpoints";
+
+.projects-wrap > p {
+  margin-bottom: 5rem;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 4.5rem;
+  @include media('<=phone') {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+}
+
+.links {
+  display: inline-block;
+  margin: 1.1rem 0;
+  word-spacing: 0.5rem;
+}
+
+.description-wrap {
+  padding-right: 3%;
+  max-width: 65%;
+  @include media('<=phone') {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.prj-photos {
+  height: 200px;
+  width: 200px;
+  border: $color-white 2px solid;
+  border-radius: 3px;
+}
+
