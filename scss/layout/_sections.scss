@@ -1,4 +1,4 @@
-@import "../abstracts/breakpoints";
+@import "../vendors/breakpoints";
 
 .sections-container {
   max-width: 99%;
@@ -41,7 +41,8 @@
   background-color: rgba(14, 14, 14, 0.85);
   border-radius: $border-radius;
 
-  p {
+  p, 
+  ul {
     font-size: 0.95rem;
   }
 }

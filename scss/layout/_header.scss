@@ -1,6 +1,6 @@
 @import "../abstracts/variables";
 @import "../abstracts/mixins";
-@import "../abstracts/breakpoints";
+@import "../vendors/breakpoints";
 
 .header {
   transition: $transition-switch-section;
