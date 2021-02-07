@@ -719,7 +719,7 @@ template {
   content: '';
   filter: invert(100%);
   position: absolute;
-  background-image: url("/imgs/close_1.svg");
+  background-image: url("https://nagievr.github.io/Portfolio/imgs/close_1.svg");
   background-repeat: no-repeat;
   background-position: center;
   top: 1rem;
