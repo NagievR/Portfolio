@@ -22,13 +22,13 @@
   }
 
   li .contact-icon {
-    transition: transform 0.22s;
+    transition: transform 0.15s;
     margin: 0;
     height: 3.2rem;
     width: 3.2rem;
     
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.15);
     }
   }
 }

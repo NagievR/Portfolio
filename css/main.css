@@ -129,6 +129,7 @@ h2,
   width: 5rem;
   line-height: 5rem;
   font-size: 1.5rem;
+  user-select: none;
 }
 
 @media (max-width: 470px) {
@@ -378,7 +379,7 @@ h2,
 }
 
 .codewars-img:hover {
-  transform: scaleX(1.1);
+  transform: scaleX(1.2);
 }
 
 .skills-wrap {
@@ -411,14 +412,14 @@ h2,
 }
 
 .contacts-wrap li .contact-icon {
-  transition: transform 0.22s;
+  transition: transform 0.15s;
   margin: 0;
   height: 3.2rem;
   width: 3.2rem;
 }
 
 .contacts-wrap li .contact-icon:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
 }
 
 .projects-wrap > p {
@@ -483,7 +484,7 @@ h2,
   position: relative;
 }
 
-.what-used {
+.techs-used {
   position: absolute;
   top: 9.7rem;
   left: 0.8rem;

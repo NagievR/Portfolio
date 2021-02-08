@@ -18,6 +18,7 @@
   width: 5rem;
   line-height: 5rem;
   font-size: 1.5rem;
+  user-select: none;
   @include media('<=phone') {
     height: 4rem;
     width: 4rem;
