@@ -374,6 +374,11 @@ h2,
 
 .codewars-img {
   margin-top: 0.7rem;
+  transition: transform 0.18s;
+}
+
+.codewars-img:hover {
+  transform: scaleX(1.1);
 }
 
 .skills-wrap {
@@ -384,8 +389,8 @@ h2,
 }
 
 .contact-icon {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2.2rem;
+  width: 2.2rem;
   margin-right: 1rem;
 }
 
@@ -406,7 +411,14 @@ h2,
 }
 
 .contacts-wrap li .contact-icon {
-  margin: none;
+  transition: transform 0.22s;
+  margin: 0;
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.contacts-wrap li .contact-icon:hover {
+  transform: scale(1.2);
 }
 
 .projects-wrap > p {
