@@ -467,6 +467,28 @@ h2,
   border-radius: 3px;
 }
 
+.photo-block {
+  position: relative;
+}
+
+.what-used {
+  position: absolute;
+  top: 9.7rem;
+  left: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.85);
+  box-shadow: 3px -2px 0.8rem 1.2rem rgba(0, 0, 0, 0.85);
+}
+
+.icn {
+  width: 2.2rem;
+  height: 2.2rem;
+  transition: transform 0.25s;
+}
+
+.icn:hover {
+  transform: translateY(0.35rem);
+}
+
 .init-anim-inner {
   animation: open-inner 0.9s ease;
 }
