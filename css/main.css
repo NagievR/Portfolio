@@ -290,7 +290,7 @@ h2,
 
 .section-header {
   top: 0;
-  position: sticky;
+  position: relative;
   background-color: transparent;
   padding: 2rem 2.5rem;
   border-bottom: #ffffff 1px solid;
