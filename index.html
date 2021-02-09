@@ -49,12 +49,10 @@
             Но потом решил, что мне это более чем интересно и продолжил изучать 
             уже более активно с целью работать в этой области.
           </p>
-
           <p>
             Английский, на данный момент, на уровне elementary.
             Чтение, понимание - pre-intermediate.
           </p>
-
           <p>
             Интересуюсь алгоритмами и общими понятиями программирования.
             <br />
@@ -70,7 +68,6 @@
               />
             </a>
           </p>
-
         </div>
       </article>
 
@@ -80,44 +77,76 @@
           <span tabindex='0' class="close-section"></span>
         </div>
         <div class="section-main skills-wrap">
-        <!-- <div class="col-1">
-            <ul>
-              <li>Flexbox</li>
-              <li>CSS Modules</li>
-              <li>валидность</li>
-              <li>адаптивность</li>
-              <li>семантика</li>
-              <li>анимации</li>
-              <li>миксины</li>
-              <li>7-1 паттерн</li>
-            </ul>
-            <ul>
-              <li>ES2020</li>
-              <li>асинхронность</li>
-              <li>замыкания</li>
-              <li>работа c DOM</li>
-              <li>работа с API</li>
-              <li>отладка кода</li>
-              <li>основы ООП</li>
-            </ul>
-          </div> 
-          <div class="col-2">
-            <ul>
-              <li>Lorem ipsum dolor</li>
-              <li>adipisicing elit.</li>
-              <li>animi odio </li>
-              <li>fugiat sunt</li>
-            </ul>
-            <ul>
-              <li>Lorem ipsum dolor</li>
-              <li>adipisicing elit.</li>
-              <li>animi odio </li>
-              <li>fugiat sunt</li>
-            </ul>
-          </div>  -->
-
-
-        </div>
+          <div class="skills-column">
+            <section class="skill-descr">
+              <h3>HTML</h3>
+              <p>
+                Изучил теги и основные атрибуты. Применяю семантические теги. 
+                Проверю разметку на валидность через w3.org.
+              </p>
+            </section>
+            <section class="skill-descr">
+              <h3>CSS / Flexbox / CSS Modules</h3>
+              <p>
+                Научился применять Flexbox для удобного создания гибких контейнеров и макетов.
+                Освоил CSS Modules для разделения CSS на независимые файлы при работе с React.
+                Изучил использование медиа запросов для адаптивной верстки.
+                Научился создавать анимации и использовать ключевые кадры и переходы.
+              </p>
+            </section>
+          </div>
+  
+          <div class="skills-column">
+            <section class="skill-descr">
+              <h3>Sass (Scss)</h3>
+              <p>
+                Изучил подход к организации SCSS файлов с помощью шаблона 7-1. 
+                Так же освоил и использую на практике такие возможности как вложенность селекторов,
+                переменные, миксины, математические операторы, обработка ошибок, условия.
+              </p>
+            </section>
+            <section class="skill-descr">
+              <h3>JavaScript</h3>
+              <p>
+                Помимо базы изучил работу с объектами, прототипы, особенности this, привязку контекста.
+                Понимаю как работает рекурсия, стек. При необходимости использую замыкания.
+                Умею работать с асинхронностями. Понимаю принцип работы Event Loop. 
+                Слежу за обновлениями языка, знаю новшества ES11.
+              </p>
+            </section>
+          </div>
+  
+          <div class="skills-column">
+            <section class="skill-descr">
+              <h3>ReactJS</h3>
+              <p>
+                Освоил базовые составляющие React: компоненты, пропсы, стейт, 
+                однонаправленный поток, жизненный цикл, подъем состояния. 
+                Использую функциональные компоненты + хуки. Но так же изучал и классовые компоненты.
+                Изучил и активно использовал контекст в одном из проектов.
+                Понимаю как работает согласование.
+              </p>
+            </section>
+            <section class="skill-descr">
+              <h3>Git / GitHub</h3>
+              <p>
+                Научился работать система контроля версий Git. Умею работать с ветками, репозиториями. 
+                Так же пушить, пулить, коммитить, использовать файл gitignore.
+              </p> 
+            </section>
+          </div>
+  
+          <div class="skills-column">
+            <section class="skill-descr">
+              <h3>Redux</h3>
+              <p>
+                Понимаю принципы и назначение Redux. 
+                Сейчас изучаю работу со стором, экшенами, редьюсерами и их взаимодействием.
+              </p>
+            </section>
+          </div>
+          
+        </div> <!-- /skills-wrap -->
       </article>
 
       <article id="projects" class="sections-wrap" >
@@ -133,7 +162,7 @@
           </p>
 
           <div class="project">
-            <div class="description-wrap">
+            <section class="prj-descr">
               <h3>Портфолио</h3>
               <p>
                 Да, это тот проект, который вы сейчас просматриваете.
@@ -145,7 +174,8 @@
                   <a target="_blank" href="https://github.com/NagievR/Portfolio">GitHub</a>
                 </span>
               </p>
-            </div>
+            </section>
+
             <div class="photo-block">
               <img class="prj-photos" src="./imgs/portfolio.png" alt="portfolio" />
               <div class="techs-used">
@@ -157,12 +187,12 @@
           </div>
 
           <div class="project">
-            <div class="description-wrap">
+            <section class="prj-descr">
               <h3>Калькулятор</h3>
               <p>
                 Основной челлендж был сделать учет приоритетов.
                 Так же я постарался проработать некоторые нюансы для удобства использования.
-                Так же хотел попрактиковаться с React без Redux, перед его изученим, 
+                Так же хотел попрактиковаться с React без Redux, перед его изучением, 
                 поэтому использовал контекст. Для CSS применил модули.
                 <br />
                 <span class="links">
@@ -170,7 +200,8 @@
                   <a target="_blank" href="https://github.com/NagievR/Calculator">GitHub</a>
                 </span>
               </p>
-            </div>
+            </section>
+            
             <div class="photo-block">
               <img class="prj-photos" src="./imgs/calculator.png" alt="calculator" />
               <div class="techs-used">
@@ -181,20 +212,21 @@
           </div>
 
           <div class="project">
-            <div class="description-wrap">
+            <section class="prj-descr">
               <h3>Погода</h3>
               <p>
                 Практиковался с React. Для получения информации о погоде и
-                местоположении использовал OpenWeatherMap API и Ipdata API соответсвенно.
+                местоположении использовал OpenWeatherMap API и Ipdata API соответственно.
                 По клику на название города можно изменить отображаемую локацию.
-                В приложении отображатся местное время выбранного города.
+                В приложении отображается местное время выбранного города.
                 <br />
                 <span class="links">
                   <a target="_blank" href="https://nagievr.github.io/Weather/?version=f36af92">Demo</a>
                   <a target="_blank" href="https://github.com/NagievR/Weather">GitHub</a>
                 </span>
               </p>
-            </div>
+            </section>
+            
             <div class="photo-block">
               <img class="prj-photos" src="./imgs/weather.png" alt="weather" />
               <div class="techs-used">

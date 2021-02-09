@@ -1,22 +1,55 @@
+@import "../vendors/breakpoints";
+
 .skills-wrap {
-  border: 1px solid red;
+  padding-left: 4%;
+  padding-right: 4%;
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    @include media("<=phone") {
+      margin-top: 1.6rem;
+      margin-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.skills-column {
+  border-bottom: 1px solid gray;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  margin-bottom: 1.5rem;
+  @include media("<=phone") {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
 
-  // .col-1,
-  // .col-2 {
-  //   display: flex;
-  //   justify-content: space-around;
-  //   flex-wrap: wrap;
-  //   border: 1px dotted wheat;
-  // }
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}
 
-  // ul {
-  //   max-width: 8rem;
-  //   border: 1px solid blue;
-  //   padding-left: 1.5rem;
-  // }
+.skill-descr {
+  width: 46%;
+  margin-right: 2%;
+  @include media("<=phone") {
+    width: 100%;
+    margin-left: 0;
+  }
 
-  
+  &:last-child {
+    margin-right: 0;
+    margin-left: 2%;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
 }
