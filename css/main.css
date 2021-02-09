@@ -383,10 +383,66 @@ h2,
 }
 
 .skills-wrap {
-  border: 1px solid red;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.skills-wrap h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 470px) {
+  .skills-wrap h3 {
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+.skills-wrap p {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.skills-column {
+  border-bottom: 1px solid gray;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 470px) {
+  .skills-column {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.skills-column:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+.skill-descr {
+  width: 46%;
+  margin-right: 2%;
+}
+
+@media (max-width: 470px) {
+  .skill-descr {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.skill-descr:last-child {
+  margin-right: 0;
+  margin-left: 2%;
+}
+
+.skill-descr:last-child:last-child {
+  margin: 0;
 }
 
 .contact-icon {
@@ -461,13 +517,13 @@ h2,
   word-spacing: 0.5rem;
 }
 
-.description-wrap {
+.prj-descr {
   padding-right: 3%;
   max-width: 65%;
 }
 
 @media (max-width: 470px) {
-  .description-wrap {
+  .prj-descr {
     max-width: 100%;
     padding: 0;
   }
