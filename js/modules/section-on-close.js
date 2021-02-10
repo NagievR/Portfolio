@@ -10,6 +10,7 @@ export const sectionOnClose = ({ classNames, elems }) => {
     chosenSection.style.opacity = '0';
     const duration = getTransitionDurationMs(chosenSection);
     setTimeout(transitionEndHandler, duration);
+    chosenSection.removeEventListener('click', handleClick);
   };
 
   const transitionEndHandler = () => { 
@@ -23,11 +24,7 @@ export const sectionOnClose = ({ classNames, elems }) => {
   };
 
   const handleClick = event => {
-    const targ = event.target;
-    const isBackground = targ.classList.contains(classNames.mainContainer);
-    const isCloseBtn = targ.classList.contains(classNames.closeSection);
-    
-    if (isBackground || isCloseBtn) {
+    if (event.target.classList.contains(classNames.closeSection)) {
       closeEventHandler();
     }
   };
@@ -39,7 +36,7 @@ export const sectionOnClose = ({ classNames, elems }) => {
     }
     chosenSection = elems.sections[targ.id];
 
-    document.body.addEventListener('click', handleClick);
+    chosenSection.addEventListener('click', handleClick);
     chosenSection.addEventListener('keydown', event => {
       if (event.key === 'Enter') {
         closeEventHandler();
