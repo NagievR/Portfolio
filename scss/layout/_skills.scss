@@ -31,21 +31,16 @@
   }
 
   &:last-child {
-    margin-bottom: 0;
     border-bottom: none;
+    margin-bottom: 0;
   }
 }
 
 .skill-descr {
   width: 46%;
-  margin-right: 2%;
+  margin-right: 4%;
   @include media("<=phone") {
     width: 100%;
     margin-left: 0;
-  }
-
-  &:last-child {
-    margin-right: 0;
-    margin-left: 2%;
   }
 }

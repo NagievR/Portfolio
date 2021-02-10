@@ -420,13 +420,13 @@ h2,
 }
 
 .skills-column:last-child {
-  margin-bottom: 0;
   border-bottom: none;
+  margin-bottom: 0;
 }
 
 .skill-descr {
   width: 46%;
-  margin-right: 2%;
+  margin-right: 4%;
 }
 
 @media (max-width: 470px) {
@@ -434,11 +434,6 @@ h2,
     width: 100%;
     margin-left: 0;
   }
-}
-
-.skill-descr:last-child {
-  margin-right: 0;
-  margin-left: 2%;
 }
 
 .contact-icon {
