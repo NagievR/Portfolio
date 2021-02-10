@@ -441,10 +441,6 @@ h2,
   margin-left: 2%;
 }
 
-.skill-descr:last-child:last-child {
-  margin: 0;
-}
-
 .contact-icon {
   height: 2.2rem;
   width: 2.2rem;
